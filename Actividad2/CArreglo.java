@@ -14,6 +14,6 @@ class CArreglo{
         int edades[] = {25, 21, 30, 18, 20, 34, 29};
 
         System.out.println(edades[0]);
-
+ 
     }
 }
