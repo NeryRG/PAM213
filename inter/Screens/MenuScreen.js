@@ -9,6 +9,8 @@ import Indicator from './Indicator'
 import FlatlistScreen from './FlatlistScreen'
 import Modal from './Modal'
 import Bottomsheet from './Bottomsheet'
+import Prac_Repaso from './Prac_Repaso'
+
 
 export default function MenuScreen (){
   
@@ -32,22 +34,25 @@ export default function MenuScreen (){
         case 'modal':
             return <Modal/>;
         case 'bottomsheet':
-            return <Bottomsheet/>;
+            return <Prac_Repaso/>;
+        case 'Prac_Repaso':
+       
         case 'menu':
             default:
                 return (
                     <View>
                          <Text>Menu de practicas </Text>
                          <Button color= 'hsla(207, 61%, 45%, 1.00)'  title='Pract: Contador' onPress={()=> setScreen('contador')}/>
-                         <Button color= 'hsla(266, 92%, 66%, 1.00)' title='Pract: Buttons' onPress={()=> setScreen('botones')}/>
-                         <Button color='hsla(266, 92%, 66%, 1.00)'  title='Pract: Text y input' onPress={()=> setScreen('input')}/>
-                        <Button color= 'hsla(266, 92%, 66%, 1.00)' title='Pract: Imagen y fondo' onPress={()=> setScreen('imagen')} />
-                        <Button color='hsla(266, 92%, 66%, 1.00)'  title='Pract: Scroll View' onPress={()=> setScreen('scroll')} />
-                        <Button color= 'hsla(266, 92%, 66%, 1.00)' title='Pract: Activity Indicator' onPress={()=> setScreen('indicator')} />
-                        <Button color= 'hsla(266, 92%, 66%, 1.00)' title='Pract: Flatlist y Section List' onPress={()=> setScreen('flatlist')} />
-                        <Button color= 'hsla(266, 92%, 66%, 1.00)'  title='Pract: Modal' onPress={()=> setScreen('modal')} />
-                        <Button color= 'hsla(266, 92%, 66%, 1.00)'  title='Pract: Bottomsheet' onPress={()=> setScreen('bottomsheet')} />
-                        
+                         <Button color= 'hsla(207, 61%, 45%, 1.00)' title='Pract: Buttons' onPress={()=> setScreen('botones')}/>
+                         <Button color='hsla(207, 61%, 45%, 1.00)'  title='Pract: Text y input' onPress={()=> setScreen('input')}/>
+                        <Button color= 'hsla(207, 61%, 45%, 1.00)' title='Pract: Imagen y fondo' onPress={()=> setScreen('imagen')} />
+                        <Button color='hsla(207, 61%, 45%, 1.00)'  title='Pract: Scroll View' onPress={()=> setScreen('scroll')} />
+                        <Button color= 'hsla(207, 61%, 45%, 1.00)' title='Pract: Activity Indicator' onPress={()=> setScreen('indicator')} />
+                        <Button color= 'hsla(207, 61%, 45%, 1.00)' title='Pract: Flatlist y Section List' onPress={()=> setScreen('flatlist')} />
+                        <Button color= 'hsla(207, 61%, 45%, 1.00)'  title='Pract: Modal' onPress={()=> setScreen('modal')} />
+                        <Button color= 'hsla(207, 61%, 45%, 1.00)'  title='Pract: Bottomsheet' onPress={()=> setScreen('bottomsheet')} />
+                        <Button color= 'hsla(207, 61%, 45%, 1.00)'  title='Pract: Prac_Repaso' onPress={()=> setScreen('Prac_Repaso')} />
+
                     </View>
                 );
         
