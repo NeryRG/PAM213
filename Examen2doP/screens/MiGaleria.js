@@ -1,113 +1,138 @@
-//ScrollView con 6 imagenes en vertical
-//4. Cada tarjeta debe contener:
-//Un ImageBackground con la fotografia
-//El título de la foto
-//Una breve descripción
-//Un Button con el texto “Ver detalles”
-//Cada tarjeta con boton y cada vez que se presione mostrar una alera de descripcion
-//Estilos consistentes, y buen espaciado entre ellos
+// ScrollView con 6 imágenes en vertical
+// Cada tarjeta debe contener:
+// - ImageBackground con fotografía
+// - Título
+// - Descripción
+// - Botón “Ver detalles” con alert
 
-import React, {useState}from "react";
-import { ScrollView, View, Text, StyleSheet, Button, Image } from "react-native";
+import React from "react";
+import { ScrollView, View, Text, StyleSheet, Button, ImageBackground, Alert } from "react-native";
 
 export default function MiGaleria() {
+
+  const mostrarAlerta = (descripcion) => {
+    Alert.alert("Detalles", descripcion);
+  };
+
   return (
     <ScrollView style={styles.fondo}>
-      <Text style={styles.titulo}>6 Imagenes</Text>
+      <Text style={styles.titulo}>Galería de Imágenes</Text>
 
-      {/* Imagen1 */}
-      <View style={styles.caja}>
-        <Text style={styles.subtitulo}>Ingresos Generales</Text>
-        <Text style={styles.texto}>
-          Aquí puedes ver de dónde provienen tus ingresos principales cada mes.
-        </Text>
-        <View style={styles.centrarImagen}>
-          <Image
-            source={require('../assets/recursos/Imagen1')}
+        <View key={1} style={styles.caja}>
+          <ImageBackground
+            source={require(`../assets/recursos/imagen1.png`)}
             style={styles.imagen}
-            resizeMode="contain"
+            imageStyle={{ borderRadius: 8 }}
+          >
+            <View style={styles.overlay}></View>
+          </ImageBackground>
+
+          <Text style={styles.subtitulo}>Imagen 1</Text>
+          <Text style={styles.texto}>Imagen número 1 del Examen 2do Parcial</Text>
+
+          <Button
+            title="Ver detalles"
+            onPress={() => mostrarAlerta(`Detalles de la imagen1`)}
+            color="#4C6EF5"
           />
         </View>
-      </View>
 
-      {/* Imagen2 */}
-      <View style={styles.caja}>
-        <Text style={styles.subtitulo}>Ahorro Acumulado</Text>
-        <Text style={styles.texto}>
-          Muestra cómo ha crecido tu ahorro a lo largo del tiempo.
-        </Text>
-        <View style={styles.centrarImagen}>
-          <Image
-            source={require('../assets/recursos/Imagen1')}
+        <View key={1} style={styles.caja}>
+          <ImageBackground
+            source={require(`../assets/recursos/imagen2.png`)}
             style={styles.imagen}
-            resizeMode="contain"
+            imageStyle={{ borderRadius: 8 }}
+          >
+            <View style={styles.overlay}></View>
+          </ImageBackground>
+
+          <Text style={styles.subtitulo}>Imagen 2</Text>
+          <Text style={styles.texto}>Imagen número 2 del Examen 2do Parcial</Text>
+
+          <Button
+            title="Ver detalles"
+            onPress={() => mostrarAlerta(`Detalles de la imagen1`)}
+            color="#4C6EF5"
           />
         </View>
-      </View>
 
-      {/* Imagen3 */}
-      <View style={styles.caja}>
-        <Text style={styles.subtitulo}>Ahorro Acumulado</Text>
-        <Text style={styles.texto}>
-          Muestra cómo ha crecido tu ahorro a lo largo del tiempo.
-        </Text>
-        <View style={styles.centrarImagen}>
-          <Image
-            source={require('../assets/recursos/Imagen1')}
+        <View key={1} style={styles.caja}>
+          <ImageBackground
+            source={require(`../assets/recursos/imagen3.png`)}
             style={styles.imagen}
-            resizeMode="contain"
+            imageStyle={{ borderRadius: 8 }}
+          >
+            <View style={styles.overlay}></View>
+          </ImageBackground>
+
+          <Text style={styles.subtitulo}>Imagen 3</Text>
+          <Text style={styles.texto}>Imagen número 3 del Examen 2do Parcial</Text>
+
+          <Button
+            title="Ver detalles"
+            onPress={() => mostrarAlerta(`Detalles de la imagen1`)}
+            color="#4C6EF5"
           />
         </View>
-      </View>
 
-      {/* Imagen4 */}
-      <View style={styles.caja}>
-        <Text style={styles.subtitulo}>Ahorro Acumulado</Text>
-        <Text style={styles.texto}>
-          Muestra cómo ha crecido tu ahorro a lo largo del tiempo.
-        </Text>
-        <View style={styles.centrarImagen}>
-          <Image
-            source={require('../assets/recursos/Imagen1')}
+        <View key={1} style={styles.caja}>
+          <ImageBackground
+            source={require(`../assets/recursos/imagen4.png`)}
             style={styles.imagen}
-            resizeMode="contain"
+            imageStyle={{ borderRadius: 8 }}
+          >
+            <View style={styles.overlay}></View>
+          </ImageBackground>
+
+          <Text style={styles.subtitulo}>Imagen 4</Text>
+          <Text style={styles.texto}>Imagen número 4 del Examen 2do Parcial</Text>
+
+          <Button
+            title="Ver detalles"
+            onPress={() => mostrarAlerta(`Detalles de la imagen1`)}
+            color="#4C6EF5"
           />
         </View>
-      </View>
 
-      {/* Imagen5 */}
-      <View style={styles.caja}>
-        <Text style={styles.subtitulo}>Ahorro Acumulado</Text>
-        <Text style={styles.texto}>
-          Muestra cómo ha crecido tu ahorro a lo largo del tiempo.
-        </Text>
-        <View style={styles.centrarImagen}>
-          <Image
-            source={require('../assets/recursos/Imagen1')}
+        <View key={1} style={styles.caja}>
+          <ImageBackground
+            source={require(`../assets/recursos/imagen5.png`)}
             style={styles.imagen}
-            resizeMode="contain"
+            imageStyle={{ borderRadius: 8 }}
+          >
+            <View style={styles.overlay}></View>
+          </ImageBackground>
+
+          <Text style={styles.subtitulo}>Imagen 5</Text>
+          <Text style={styles.texto}>Imagen número 5 del Examen 2do Parcial</Text>
+
+          <Button
+            title="Ver detalles"
+            onPress={() => mostrarAlerta(`Detalles de la imagen1`)}
+            color="#4C6EF5"
           />
         </View>
-      </View>
 
-      {/* Imagen6 */}
-      <View style={styles.caja}>
-        <Text style={styles.subtitulo}>Ahorro Acumulado</Text>
-        <Text style={styles.texto}>
-          Muestra cómo ha crecido tu ahorro a lo largo del tiempo.
-        </Text>
-        <View style={styles.centrarImagen}>
-          <Image
-            source={require('../assets/recursos/Imagen1')}
+        <View key={6} style={styles.caja}>
+          <ImageBackground
+            source={require(`../assets/recursos/imagen6.png`)}
             style={styles.imagen}
-            resizeMode="contain"
+            imageStyle={{ borderRadius: 8 }}
+          >
+            <View style={styles.overlay}></View>
+          </ImageBackground>
+
+          <Text style={styles.subtitulo}>Imagen 6</Text>
+          <Text style={styles.texto}>Imagen número 6 del Examen 2do Parcial</Text>
+
+          <Button
+            title="Ver detalles"
+            onPress={() => mostrarAlerta(`Detalles de la imagen1`)}
+            color="#4C6EF5"
           />
         </View>
-      </View>
-      
+
     </ScrollView>
-
-
   );
 }
 
@@ -127,31 +152,28 @@ const styles = StyleSheet.create({
   caja: {
     backgroundColor: '#FFFFFF',
     padding: 15,
-    borderRadius: 8,
+    borderRadius: 10,
     marginBottom: 25,
-    alignItems: 'center', // centra todo dentro
+    alignItems: "center",
+    elevation: 4,
   },
   subtitulo: {
     fontSize: 18,
-    fontWeight: 'bold',
-    color: '#2D3748',
-    marginBottom: 8,
-    textAlign: 'center',
+    fontWeight: "bold",
+    color: "#2D3748",
+    marginTop: 10,
+    marginBottom: 5,
   },
   texto: {
     fontSize: 14,
-    color: '#4A5568',
+    color: "#4A5568",
     marginBottom: 10,
-    textAlign: 'center',
-  },
-  centrarImagen: {
-    width: '100%',
-    alignItems: 'center',
+    textAlign: "center",
   },
   imagen: {
-    width: '90%',
+    width: "100%",
     height: 200,
-    borderRadius: 8,
-    backgroundColor: '#DDE7FF',
+    borderRadius: 10,
+    overflow: "hidden",
   },
 });
