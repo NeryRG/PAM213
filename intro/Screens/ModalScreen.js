@@ -34,7 +34,7 @@ const botonGuardar = () => {
 
  return(
     <View style={styles.container}>
-        <TouchableOpacity style={styles.botonesMostrar} onPress={() => setModalVisible(tue)}>
+        <TouchableOpacity style={styles.botonesMostrar} onPress={() => setModalVisible(true)}>
             <Text style={styles.botonesMostrarTexto}>Mostrar Modal</Text>
         </TouchableOpacity>
 
