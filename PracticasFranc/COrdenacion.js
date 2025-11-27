@@ -20,3 +20,7 @@ public static void burbuja(int[] arr) {
         }
     }
 }
+function newFunction() {
+    ;
+}
+

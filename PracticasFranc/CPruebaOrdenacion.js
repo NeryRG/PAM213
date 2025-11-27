@@ -52,4 +52,4 @@ public class CPruebaOrdenacion {
         System.out.println("Número de procesadores: " + System.getenv("NUMBER_OF_PROCESSORS"));
         System.out.println("Directorio temporal: " + System.getenv("TMP"));
     }
-}
+} 
